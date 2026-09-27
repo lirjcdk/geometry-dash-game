@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#11162b" />
+  <title>Neon Dash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARCADE RUNNER</p>
+        <h1>Neon Dash</h1>
+      </div>
+      <div class="score-panel">
+        <span>POÄNG</span>
+        <strong id="score">0</strong>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <canvas id="game" width="960" height="540" aria-label="Neon Dash spelplan"></canvas>
+      <div id="start-screen" class="overlay">
+        <div class="hero-icon">◆</div>
+        <h2>Redo att hoppa?</h2>
+        <p>Undvik hinderna och håll rytmen.</p>
+        <button id="start-button">Starta spelet</button>
+        <small>Tryck <b>SPACE</b>, <b>W</b> eller klicka för att hoppa</small>
+      </div>
+      <div id="game-over" class="overlay hidden">
+        <div class="hero-icon danger">✦</div>
+        <h2>Aj då!</h2>
+        <p>Du klarade <strong><span id="final-score">0</span> poäng</strong>.</p>
+        <button id="restart-button">Försök igen</button>
+        <small>Tryck <b>R</b> för att starta om</small>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span><i class="key">SPACE</i> Hoppa</span>
+      <span><i class="key">P</i> Pausa</span>
+      <span><i class="key">R</i> Starta om</span>
+      <span class="best">BÄSTA: <b id="best-score">0</b></span>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
